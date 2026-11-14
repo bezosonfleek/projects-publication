@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects - Geoffrey Sakora</title>
+<meta name="description" content="Cloud and DevOps projects by Geoffrey Sakora: tested backups, Terraform pipelines, Docker deploys and server hardening.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="prompt" href="./">geoffrey@projects:~$</a>
+  <nav aria-label="Main">
+    <button class="theme" type="button" aria-label="Light mode" aria-pressed="false"><svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <a href="#projects">Projects</a>
+    <a href="writing/">Writing</a>
+    <a href="https://ctf.geoffreysakora.cv">CTF</a>
+    <a href="#services">Services</a>
+  </nav>
+</header>
+
+<main>
+  <h1>I build, test and secure cloud infrastructure.</h1>
+  <p class="lead">I’m Geoffrey, a Cloud and DevOps engineer. I work with Linux servers, containers and automated pipelines, currently working on backup and disaster recovery.</p>
+  <p class="lead">This site shows the work: what I built, how I tested it, what broke and what I changed. My direction is cloud security and DevSecOps, so web security practice and server hardening sit next to the infrastructure projects.</p>
+  <p class="dim">Each project has its own page. If you want the code first, every page starts with a link to the repository.</p>
+
+  <h2>Start here</h2>
+  <div class="grid">
+    <a class="box" href="#projects"><span class="body"><span class="head"><strong>Projects</strong></span><span class="desc">Write-ups with architecture, tests and results</span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="writing/"><span class="body"><span class="head"><strong>Writing</strong></span><span class="desc">Articles on backups, Terraform and CI/CD</span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="https://ctf.geoffreysakora.cv"><span class="body"><span class="head"><strong>CTF write-ups</strong></span><span class="desc">Web security practice, on its own site</span></span><span class="arr" aria-hidden="true">↗</span></a>
+  </div>
+
+
+  <h2 id="projects">Projects</h2>
+  <div class="stack">
+    <a class="box" href="zerodrift/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>ZeroDrift</strong><span class="st">In progress</span></span><span class="desc">Terraform for an AWS VPC and server, with every change reviewed as a pull request before it is applied.</span><span class="tags"><span>Terraform</span><span>AWS</span><span>GitHub Actions</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="githubactions/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Quiz app deploy</strong><span class="st live">Live</span></span><span class="desc">A containerized app that deploys with GitHub Actions to EC2 and to a Proxmox server, exposed through Cloudflare Tunnel.</span><span class="tags"><span>Docker</span><span>GitHub Actions</span><span>Cloudflare Tunnel</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="backups/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Tested backups lab</strong><span class="st">Write-up due</span></span><span class="desc">LVM snapshot backups of KVM guests, restored and verified, plus what broke during kill testing.</span><span class="tags"><span>LVM</span><span>KVM</span><span>Ansible</span><span>Bash</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="k8s-recovery/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Kubernetes backup and recovery lab</strong><span class="st">Planned</span></span><span class="desc">A lab rebuild of a backup pipeline with persistent storage, S3-compatible targets and PostgreSQL point-in-time recovery.</span><span class="tags"><span>Kubernetes</span><span>Longhorn</span><span>PostgreSQL</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="homelab/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Home lab networking</strong><span class="st live">Live</span></span><span class="desc">Isolated VMs on Linux bridges with NAT, Windows Server DNS and DHCP, Twingate access and key-only SSH.</span><span class="tags"><span>Proxmox</span><span>Twingate</span><span>Windows Server</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="health-agent/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Infrastructure health agent</strong><span class="st">In progress</span></span><span class="desc">A Python agent that checks CPU, memory, disk, services and endpoints, then sends a plain-language alert to Discord.</span><span class="tags"><span>Python</span><span>Discord</span><span>Ollama</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="waf-lab/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>WAF in front of Juice Shop</strong><span class="st">Planned</span></span><span class="desc">ModSecurity with the OWASP Core Rule Set in a home lab, tested against a deliberately vulnerable app.</span><span class="tags"><span>ModSecurity</span><span>OWASP CRS</span><span>Docker</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+  </div>
+
+  <h2 id="services">Small jobs I take on</h2>
+  <ul class="plain">
+    <li>Tested backups: automated backups with a restore test and a short runbook.</li>
+    <li>Linux server hardening: key-only SSH, firewall, updates and a before-and-after report.</li>
+    <li>Docker and CI/CD: containerize an app and deploy it with GitHub Actions.</li>
+    <li>Bash automation: Tested scripts for server tasks.</li>
+  </ul>
+  <a class="box" href="#"><span class="body"><span class="head"><strong>Message me on Fiverr</strong></span><span class="desc">[gig link]</span></span><span class="arr" aria-hidden="true">↗</span></a>
+</main>
+
+<footer>
+  <span>© 2026 Geoffrey Sakora</span>
+  <a href="https://github.com/bezosonfleek">GitHub</a>
+  <a href="https://www.linkedin.com/in/geoffrey-sakora-7o7/">LinkedIn</a>
+</footer>
+</div>
+<script src="theme.js"></script>
+</body>
+</html>
