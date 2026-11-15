@@ -36,9 +36,12 @@ ul.plain,ol.plain{margin:0 0 16px;padding-left:22px}
 ul.plain li,ol.plain li{margin-bottom:8px}
 footer{padding:56px 0 40px;color:var(--dim);font-size:14px;display:flex;flex-wrap:wrap;gap:12px 24px}
 footer a{color:var(--dim)}
-.theme{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-8px 0;padding:0;background:transparent;border:1px solid var(--line);color:var(--text);cursor:pointer}
-.theme:hover{border-color:var(--acc);color:var(--acc);background:var(--hover)}
+.theme{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:-8px 0;padding:0;background:none;border:0;color:var(--text);cursor:pointer}
+.theme:hover{color:var(--acc)}
 .theme svg{display:block}
 .theme .i-moon{display:none}
 [data-theme="light"] .theme .i-sun{display:none}
 [data-theme="light"] .theme .i-moon{display:block}
+.box.off{border-style:dashed;color:var(--dim);cursor:default}
+.box.off:hover{border-color:var(--line);background:none}
+.box.off:hover strong{color:inherit}

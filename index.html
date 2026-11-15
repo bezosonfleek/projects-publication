@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects - Geoffrey Sakora</title>
+<title>Projects – Geoffrey Sakora</title>
 <meta name="description" content="Cloud and DevOps projects by Geoffrey Sakora: tested backups, Terraform pipelines, Docker deploys and server hardening.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
 </header>
 
 <main>
-  <h1>I build, test and secure cloud infrastructure.</h1>
-  <p class="lead">I’m Geoffrey, a Cloud and DevOps engineer. I work with Linux servers, containers and automated pipelines, currently working on backup and disaster recovery.</p>
+  <h1>I build and test cloud infrastructure.</h1>
+  <p class="lead">I’m Geoffrey, a junior cloud and DevOps engineer. I work with Linux servers, containers and automated pipelines, with a focus on backup and disaster recovery.</p>
   <p class="lead">This site shows the work: what I built, how I tested it, what broke and what I changed. My direction is cloud security and DevSecOps, so web security practice and server hardening sit next to the infrastructure projects.</p>
   <p class="dim">Each project has its own page. If you want the code first, every page starts with a link to the repository.</p>
 
@@ -36,26 +36,26 @@
     <a class="box" href="https://ctf.geoffreysakora.cv"><span class="body"><span class="head"><strong>CTF write-ups</strong></span><span class="desc">Web security practice, on its own site</span></span><span class="arr" aria-hidden="true">↗</span></a>
   </div>
 
-
   <h2 id="projects">Projects</h2>
   <div class="stack">
     <a class="box" href="zerodrift/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>ZeroDrift</strong><span class="st">In progress</span></span><span class="desc">Terraform for an AWS VPC and server, with every change reviewed as a pull request before it is applied.</span><span class="tags"><span>Terraform</span><span>AWS</span><span>GitHub Actions</span></span></span><span class="arr" aria-hidden="true">→</span></a>
-    <a class="box" href="githubactions/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Quiz app deploy</strong><span class="st live">Live</span></span><span class="desc">A containerized app that deploys with GitHub Actions to EC2 and to a Proxmox server, exposed through Cloudflare Tunnel.</span><span class="tags"><span>Docker</span><span>GitHub Actions</span><span>Cloudflare Tunnel</span></span></span><span class="arr" aria-hidden="true">→</span></a>
-    <a class="box" href="backups/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Tested backups lab</strong><span class="st">Write-up due</span></span><span class="desc">LVM snapshot backups of KVM guests, restored and verified, plus what broke during kill testing.</span><span class="tags"><span>LVM</span><span>KVM</span><span>Ansible</span><span>Bash</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="todo-app/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Containerized ToDo app</strong><span class="st live">Built</span></span><span class="desc">A REST API with a database, containerized with Docker Compose and deployed to a server on AWS EC2.</span><span class="tags"><span>Docker</span><span>FastAPI</span><span>PostgreSQL</span><span>AWS EC2</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="backups/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Tested backups lab</strong><span class="st">Planned</span></span><span class="desc">LVM snapshot backups of KVM guests, restored and verified, plus what broke during kill testing.</span><span class="tags"><span>LVM</span><span>KVM</span><span>Ansible</span><span>Bash</span></span></span><span class="arr" aria-hidden="true">→</span></a>
     <a class="box" href="k8s-recovery/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Kubernetes backup and recovery lab</strong><span class="st">Planned</span></span><span class="desc">A lab rebuild of a backup pipeline with persistent storage, S3-compatible targets and PostgreSQL point-in-time recovery.</span><span class="tags"><span>Kubernetes</span><span>Longhorn</span><span>PostgreSQL</span></span></span><span class="arr" aria-hidden="true">→</span></a>
-    <a class="box" href="homelab/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Home lab networking</strong><span class="st live">Live</span></span><span class="desc">Isolated VMs on Linux bridges with NAT, Windows Server DNS and DHCP, Twingate access and key-only SSH.</span><span class="tags"><span>Proxmox</span><span>Twingate</span><span>Windows Server</span></span></span><span class="arr" aria-hidden="true">→</span></a>
+    <a class="box" href="homelab/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Home lab networking</strong><span class="st live">Built</span></span><span class="desc">Isolated VMs on Linux bridges with NAT, Windows Server DNS and DHCP, Twingate access and key-only SSH.</span><span class="tags"><span>Proxmox</span><span>Twingate</span><span>Windows Server</span></span></span><span class="arr" aria-hidden="true">→</span></a>
     <a class="box" href="health-agent/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>Infrastructure health agent</strong><span class="st">In progress</span></span><span class="desc">A Python agent that checks CPU, memory, disk, services and endpoints, then sends a plain-language alert to Discord.</span><span class="tags"><span>Python</span><span>Discord</span><span>Ollama</span></span></span><span class="arr" aria-hidden="true">→</span></a>
     <a class="box" href="waf-lab/" target="_blank" rel="noopener"><span class="body"><span class="head"><strong>WAF in front of Juice Shop</strong><span class="st">Planned</span></span><span class="desc">ModSecurity with the OWASP Core Rule Set in a home lab, tested against a deliberately vulnerable app.</span><span class="tags"><span>ModSecurity</span><span>OWASP CRS</span><span>Docker</span></span></span><span class="arr" aria-hidden="true">→</span></a>
   </div>
 
   <h2 id="services">Small jobs I take on</h2>
-  <ul class="plain">
-    <li>Tested backups: automated backups with a restore test and a short runbook.</li>
-    <li>Linux server hardening: key-only SSH, firewall, updates and a before-and-after report.</li>
-    <li>Docker and CI/CD: containerize an app and deploy it with GitHub Actions.</li>
-    <li>Bash automation: Tested scripts for server tasks.</li>
-  </ul>
-  <a class="box" href="#"><span class="body"><span class="head"><strong>Message me on Fiverr</strong></span><span class="desc">[gig link]</span></span><span class="arr" aria-hidden="true">↗</span></a>
+  <ul class="plain"><li>Tested backups: automated backups with a restore test and a short runbook.</li><li>Linux server hardening: key-only SSH, firewall, updates and a before-and-after report.</li><li>Docker and CI/CD: containerize an app and deploy it with GitHub Actions.</li><li>Bash automation: a tested script for one server task.</li></ul>
+
+  <h2 id="contact">Contact</h2>
+  <div class="grid">
+    <a class="box" href="mailto:geoffreysakora@gmail.com?subject=Project%20enquiry"><span class="body"><span class="head"><strong>Email</strong></span><span class="desc">geoffreysakora@gmail.com</span></span><span class="arr" aria-hidden="true">↗</span></a>
+    <a class="box" href="https://www.linkedin.com/in/geoffrey-sakora-7o7/"><span class="body"><span class="head"><strong>LinkedIn</strong></span><span class="desc">Message me on LinkedIn</span></span><span class="arr" aria-hidden="true">↗</span></a>
+    <div class="box off"><span class="body"><span class="head"><strong>Fiverr</strong><span class="st">Coming soon</span></span><span class="desc">Gigs are not live yet</span></span></div>
+  </div>
 </main>
 
 <footer>
