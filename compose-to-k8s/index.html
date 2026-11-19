@@ -30,7 +30,7 @@
   <h1>Compose to Kubernetes migration</h1>
   <p class="lead">A real migration of a multi-service app from Docker Compose to Kubernetes, documented from a clean environment through cutover and rollback.</p>
   <p><span class="st">Status: Final stages</span></p>
-  <div class="tags" style="margin-top:0"><span>Kubernetes</span><span>Docker Compose</span><span>Kompose</span><span>Kustomize</span></div>
+  <div class="tags" style="margin-top:0"><span>Kubernetes</span><span>Docker Compose</span><span>Kompose</span><span>Kustomize</span><span>MicroK8s</span></div>
 
   <h2>The app</h2>
   <p>A voting application with five services: vote, result, worker, Redis and PostgreSQL. It is based on Docker’s open-source <a href="https://github.com/dockersamples/example-voting-app" target="_blank" rel="noopener">example-voting-app</a> (Apache-2.0).</p>
@@ -52,8 +52,16 @@ docs/              one write-up per phase</pre>
   <ul class="plain"><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/00-environment.md" target="_blank" rel="noopener">Environment</a></li><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/01-compose-setup.md" target="_blank" rel="noopener">Compose setup</a></li><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/02-audit.md" target="_blank" rel="noopener">Audit</a></li><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/03-migration-plan.md" target="_blank" rel="noopener">Migration plan</a></li><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/04-cutover.md" target="_blank" rel="noopener">Cutover record</a></li><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/05-rollback.md" target="_blank" rel="noopener">Rollback</a></li><li><a href="https://github.com/bezosonfleek/compose-to-k8s-migration/blob/HEAD/docs/lessons-learned.md" target="_blank" rel="noopener">Lessons learned</a></li></ul>
 
   <h2>Evidence</h2>
-  <div class="ph">[ Screenshot of the pods running]</div>
-  <div class="ph">[ Screenshot/note from the cutover]</div>
+<div class="term" role="group" aria-label="Terminal output of kubectl get pods">
+    <div class="bar">bezos@bezos-Spectre-ef0xx:~$ kubectl get pods -n voting</div>
+<pre>NAME                      READY   STATUS    RESTARTS   AGE
+db-0                      1/1     Running   0          4h14m
+redis-69d6474774-cjrjz    1/1     Running   0          4h17m
+result-f84bdf4b4-spr8p    1/1     Running   0          3h19m
+vote-8b966d98b-lrfr7      1/1     Running   0          3h2m
+worker-5dc45fd546-5cwr9   1/1     Running   0          3h19m</pre>
+  </div>
+  <p class="note">All five pods Running with zero restarts on MicroK8s.</p>  <figure class="shot"><img src="images/pods-lens.png" alt="Lens showing the same five pods in the voting namespace, with db-0 controlled by a StatefulSet and the others by ReplicaSets" loading="lazy"><figcaption>The same pods in Lens. The database runs as a StatefulSet, and the other four are managed by ReplicaSets.</figcaption></figure>
 
   <a class="box" href="../#projects"><span class="body"><span class="head"><strong>Back to all projects</strong></span></span><span class="arr" aria-hidden="true">→</span></a>
 </main>

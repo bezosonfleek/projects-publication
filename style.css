@@ -45,3 +45,6 @@ footer a{color:var(--dim)}
 .box.off{border-style:dashed;color:var(--dim);cursor:default}
 .box.off:hover{border-color:var(--line);background:none}
 .box.off:hover strong{color:inherit}
+.shot{margin:0 0 20px}
+.shot img{display:block;max-width:100%;height:auto;border:1px solid var(--line)}
+.shot figcaption{color:var(--dim);font-size:13px;margin-top:8px}
